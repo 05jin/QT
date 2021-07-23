@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>qlineedittestClass</class>
+ <widget class="QWidget" name="qlineedittestClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>951</width>
+    <height>644</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>qlineedittest</string>
+  </property>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>80</y>
+     <width>191</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>IP</string>
+   </property>
+   <property name="cursorMoveStyle">
+    <enum>Qt::VisualMoveStyle</enum>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>80</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Test</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>30</y>
+     <width>181</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>30</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>View</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="delEdit">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>270</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>删除按钮</string>
+   </property>
+   <property name="clearButtonEnabled">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="readlEdit">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>330</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>测试只读</string>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+   <property name="placeholderText">
+    <string>只读</string>
+   </property>
+   <property name="clearButtonEnabled">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="threeEdit">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>390</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="maxLength">
+    <number>3</number>
+   </property>
+   <property name="placeholderText">
+    <string>最多三位</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>140</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>撤销</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_4">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>190</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>重做</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="ip">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>470</y>
+     <width>191</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>IP地址</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="textEdit">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>130</y>
+     <width>191</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>AAAAA</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="iedit">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>270</y>
+     <width>181</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>只能输入整数</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="dedit">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>330</y>
+     <width>181</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>只能输入浮点数 12.123</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="email">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>390</y>
+     <width>181</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>email</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="savepushButton">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>390</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="sedit">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>500</y>
+     <width>181</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>change</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="slabel">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>500</y>
+     <width>301</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>slabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="rlabel">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>550</y>
+     <width>291</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>rlabel</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="sedit_2">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>120</y>
+     <width>301</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+	border:3px dotted  rgba(255,0,0,150);
+	border-radius:10px;
+}
+QLineEdit[echoMode=&quot;2&quot;]{
+	
+}</string>
+   </property>
+   <property name="text">
+    <string>123456</string>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Password</enum>
+   </property>
+   <property name="placeholderText">
+    <string/>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="qlineedittest.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>qlineedittestClass</receiver>
+   <slot>Test()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>438</x>
+     <y>95</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>352</x>
+     <y>752</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>qlineedittestClass</receiver>
+   <slot>View()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>400</x>
+     <y>41</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>321</x>
+     <y>714</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>lineEdit</receiver>
+   <slot>undo()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>432</x>
+     <y>149</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>219</x>
+     <y>91</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>lineEdit</receiver>
+   <slot>redo()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>443</x>
+     <y>204</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>254</x>
+     <y>95</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>textEdit</sender>
+   <signal>returnPressed()</signal>
+   <receiver>qlineedittestClass</receiver>
+   <slot>View()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>281</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>253</x>
+     <y>729</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit</sender>
+   <signal>returnPressed()</signal>
+   <receiver>qlineedittestClass</receiver>
+   <slot>View()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>337</x>
+     <y>99</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>408</x>
+     <y>713</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>savepushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>qlineedittestClass</receiver>
+   <slot>Save()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>639</x>
+     <y>413</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>655</x>
+     <y>806</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sedit</sender>
+   <signal>editingFinished()</signal>
+   <receiver>qlineedittestClass</receiver>
+   <slot>Edit()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>502</x>
+     <y>517</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>531</x>
+     <y>756</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sedit</sender>
+   <signal>returnPressed()</signal>
+   <receiver>qlineedittestClass</receiver>
+   <slot>Return()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>467</x>
+     <y>521</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>476</x>
+     <y>808</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sedit</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>qlineedittestClass</receiver>
+   <slot>Edited(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>529</x>
+     <y>524</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>557</x>
+     <y>691</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sedit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>qlineedittestClass</receiver>
+   <slot>Change(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>459</x>
+     <y>527</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>457</x>
+     <y>729</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>Test()</slot>
+  <slot>View()</slot>
+  <slot>Save()</slot>
+  <slot>Edit()</slot>
+  <slot>Return()</slot>
+  <slot>Edited(QString)</slot>
+  <slot>Change(QString)</slot>
+ </slots>
+</ui>

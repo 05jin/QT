@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="XPS">
+    <file>Resources/eraser.png</file>
+    <file>Resources/pen.png</file>
+  </qresource>
+</RCC>

@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QListWidgetTestClass</class>
+ <widget class="QWidget" name="QListWidgetTestClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>780</width>
+    <height>536</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>QListWidgetTest</string>
+  </property>
+  <widget class="QListWidget" name="listWidget">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>60</y>
+     <width>561</width>
+     <height>361</height>
+    </rect>
+   </property>
+   <property name="selectionMode">
+    <enum>QAbstractItemView::ExtendedSelection</enum>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
+   </property>
+   <property name="flow">
+    <enum>QListView::TopToBottom</enum>
+   </property>
+   <property name="gridSize">
+    <size>
+     <width>0</width>
+     <height>40</height>
+    </size>
+   </property>
+   <property name="sortingEnabled">
+    <bool>false</bool>
+   </property>
+   <item>
+    <property name="text">
+     <string>新建项目1</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>新建项目2</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>test.jpg</normaloff>test.jpg</iconset>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>新建项目3</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>新建项目4</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QPushButton" name="printButton">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>10</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Print</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="sortButton">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>10</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Sort</string>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="QListWidgetTest.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>printButton</sender>
+   <signal>clicked()</signal>
+   <receiver>QListWidgetTestClass</receiver>
+   <slot>Click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>146</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>173</x>
+     <y>783</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sortButton</sender>
+   <signal>clicked()</signal>
+   <receiver>QListWidgetTestClass</receiver>
+   <slot>Sort()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>281</x>
+     <y>27</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>238</x>
+     <y>733</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>listWidget</sender>
+   <signal>currentRowChanged(int)</signal>
+   <receiver>QListWidgetTestClass</receiver>
+   <slot>CurChange(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>471</x>
+     <y>210</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>438</x>
+     <y>684</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>listWidget</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>QListWidgetTestClass</receiver>
+   <slot>CurChange(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>556</x>
+     <y>307</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>609</x>
+     <y>779</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>listWidget</sender>
+   <signal>currentItemChanged(QListWidgetItem*,QListWidgetItem*)</signal>
+   <receiver>QListWidgetTestClass</receiver>
+   <slot>CurChange(QListWidgetItem*,QListWidgetItem*)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>598</x>
+     <y>323</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>631</x>
+     <y>699</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>listWidget</sender>
+   <signal>itemActivated(QListWidgetItem*)</signal>
+   <receiver>QListWidgetTestClass</receiver>
+   <slot>ItemAct(QListWidgetItem*)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>391</x>
+     <y>309</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>397</x>
+     <y>698</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>listWidget</sender>
+   <signal>itemChanged(QListWidgetItem*)</signal>
+   <receiver>QListWidgetTestClass</receiver>
+   <slot>ItemChange(QListWidgetItem*)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>341</x>
+     <y>365</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>316</x>
+     <y>677</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>listWidget</sender>
+   <signal>itemClicked(QListWidgetItem*)</signal>
+   <receiver>QListWidgetTestClass</receiver>
+   <slot>ItemClick(QListWidgetItem*)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>233</x>
+     <y>245</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>211</x>
+     <y>700</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>listWidget</sender>
+   <signal>itemDoubleClicked(QListWidgetItem*)</signal>
+   <receiver>QListWidgetTestClass</receiver>
+   <slot>ItemDoubleClick(QListWidgetItem*)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>503</x>
+     <y>343</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>657</x>
+     <y>733</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>listWidget</sender>
+   <signal>itemEntered(QListWidgetItem*)</signal>
+   <receiver>QListWidgetTestClass</receiver>
+   <slot>ItemEntered(QListWidgetItem*)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>629</x>
+     <y>358</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>705</x>
+     <y>646</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>listWidget</sender>
+   <signal>itemPressed(QListWidgetItem*)</signal>
+   <receiver>QListWidgetTestClass</receiver>
+   <slot>ItemPressed(QListWidgetItem*)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>197</x>
+     <y>310</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>831</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <signal>signal1()</signal>
+  <slot>Click()</slot>
+  <slot>CurChange(QListWidgetItem*,QListWidgetItem*)</slot>
+  <slot>CurChange(int)</slot>
+  <slot>CurChange(QString)</slot>
+  <slot>ItemAct(QListWidgetItem*)</slot>
+  <slot>ItemChange(QListWidgetItem*)</slot>
+  <slot>ItemClick(QListWidgetItem*)</slot>
+  <slot>ItemDoubleClick(QListWidgetItem*)</slot>
+  <slot>ItemEntered(QListWidgetItem*)</slot>
+  <slot>ItemPressed(QListWidgetItem*)</slot>
+ </slots>
+</ui>

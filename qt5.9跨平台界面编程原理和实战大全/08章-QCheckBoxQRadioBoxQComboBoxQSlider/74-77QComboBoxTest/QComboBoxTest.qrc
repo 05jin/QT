@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="QComboBoxTest">
+    <file>Resources/test.png</file>
+  </qresource>
+</RCC>

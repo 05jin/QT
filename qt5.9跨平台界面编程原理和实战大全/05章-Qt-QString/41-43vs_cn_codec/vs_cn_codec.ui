@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>vs_cn_codecClass</class>
+ <widget class="QWidget" name="vs_cn_codecClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>940</width>
+    <height>635</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>vs_cn_codec</string>
+  </property>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>200</y>
+     <width>331</width>
+     <height>191</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>中文按钮</string>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="vs_cn_codec.qrc"/>
+ </resources>
+ <connections/>
+</ui>

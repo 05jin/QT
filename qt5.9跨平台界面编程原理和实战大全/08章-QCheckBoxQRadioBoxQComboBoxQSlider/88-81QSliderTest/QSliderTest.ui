@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QSliderTestClass</class>
+ <widget class="QWidget" name="QSliderTestClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1048</width>
+    <height>652</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>QSliderTest</string>
+  </property>
+  <widget class="XSlider" name="horizontalSlider">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>140</y>
+     <width>551</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QSlider::groove{
+	background-color: rgba(200, 83, 245,100);
+	height:28px;
+	border:1px solid rgba(200, 83, 245,100);
+	border-radius:10px;
+}
+QSlider::handle{
+	width:30px;
+	background-color: rgba(225, 10, 0,200);
+	border:1px solid  rgba(225, 10, 0,200);;
+	border-radius:10px;
+	margin:-10px 0;
+}
+QSlider::sub-page{
+	background-color: rgba(125, 13, 135,80);
+}
+QSlider::add-page{
+	background-color: rgba(0, 13, 135,80);
+}
+
+</string>
+   </property>
+   <property name="maximum">
+    <number>999</number>
+   </property>
+   <property name="singleStep">
+    <number>100</number>
+   </property>
+   <property name="pageStep">
+    <number>500</number>
+   </property>
+   <property name="value">
+    <number>100</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QSlider" name="verticalSlider">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>370</y>
+     <width>22</width>
+     <height>160</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>30</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>PushButton</string>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>XSlider</class>
+   <extends>QSlider</extends>
+   <header>XSlider.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="QSliderTest.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>horizontalSlider</sender>
+   <signal>sliderMoved(int)</signal>
+   <receiver>QSliderTestClass</receiver>
+   <slot>Move(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>317</x>
+     <y>167</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>381</x>
+     <y>837</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider</sender>
+   <signal>sliderPressed()</signal>
+   <receiver>QSliderTestClass</receiver>
+   <slot>Press()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>445</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>528</x>
+     <y>777</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider</sender>
+   <signal>sliderReleased()</signal>
+   <receiver>QSliderTestClass</receiver>
+   <slot>Rel()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>560</x>
+     <y>178</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>614</x>
+     <y>724</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>QSliderTestClass</receiver>
+   <slot>Change(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>615</x>
+     <y>166</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>681</x>
+     <y>737</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>QSliderTestClass</receiver>
+   <slot>Click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>170</x>
+     <y>35</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>73</x>
+     <y>731</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>Move(int)</slot>
+  <slot>Change(int)</slot>
+  <slot>Press()</slot>
+  <slot>Rel()</slot>
+  <slot>Click()</slot>
+ </slots>
+</ui>

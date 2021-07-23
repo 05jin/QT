@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="QLabelTest">
+    <file>Resources/test.gif</file>
+  </qresource>
+</RCC>

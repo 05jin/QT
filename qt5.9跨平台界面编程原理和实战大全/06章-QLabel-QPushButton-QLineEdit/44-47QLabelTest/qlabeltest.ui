@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QLabelTestClass</class>
+ <widget class="QWidget" name="QLabelTestClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>786</width>
+    <height>611</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>QLabelTest</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>120</y>
+     <width>531</width>
+     <height>241</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 0, 0);
+font: 18pt &quot;黑体&quot;;
+background-color: rgb(161, 220, 247);</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;测试的链接&lt;a href=&quot;www.ffmpeg.club&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;www.ffmpeg.club&lt;/span&gt;&lt;/a&gt;链接地址&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::RichText</enum>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>390</y>
+     <width>301</width>
+     <height>191</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="qlabeltest.qrc">:/QLabelTest/Resources/test.gif</pixmap>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="qlabeltest.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>label</sender>
+   <signal>linkActivated(QString)</signal>
+   <receiver>QLabelTestClass</receiver>
+   <slot>Act(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>345</x>
+     <y>154</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>38</x>
+     <y>695</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>label</sender>
+   <signal>linkHovered(QString)</signal>
+   <receiver>QLabelTestClass</receiver>
+   <slot>Hov(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>283</x>
+     <y>253</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>242</x>
+     <y>687</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>Act(QString)</slot>
+  <slot>Hov(QString)</slot>
+ </slots>
+</ui>

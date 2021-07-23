@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QComboBoxTestClass</class>
+ <widget class="QWidget" name="QComboBoxTestClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>636</width>
+    <height>620</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>QComboBoxTest</string>
+  </property>
+  <widget class="QComboBox" name="comboBox">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>70</y>
+     <width>221</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="editable">
+    <bool>true</bool>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>50</width>
+     <height>50</height>
+    </size>
+   </property>
+   <item>
+    <property name="text">
+     <string>test1</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>测试二</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>test3</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Resources/test.png</normaloff>Resources/test.png</iconset>
+    </property>
+   </item>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>70</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>PushButton</string>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="QComboBoxTest.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>QComboBoxTestClass</receiver>
+   <slot>Click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>438</x>
+     <y>89</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>392</x>
+     <y>938</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox</sender>
+   <signal>activated(QString)</signal>
+   <receiver>QComboBoxTestClass</receiver>
+   <slot>Act(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>197</x>
+     <y>86</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>257</x>
+     <y>793</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox</sender>
+   <signal>activated(int)</signal>
+   <receiver>QComboBoxTestClass</receiver>
+   <slot>Act(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>277</x>
+     <y>90</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>311</x>
+     <y>831</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>QComboBoxTestClass</receiver>
+   <slot>Cur(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>232</x>
+     <y>87</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>281</x>
+     <y>736</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>QComboBoxTestClass</receiver>
+   <slot>Cur(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>119</x>
+     <y>102</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>250</x>
+     <y>740</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox</sender>
+   <signal>highlighted(int)</signal>
+   <receiver>QComboBoxTestClass</receiver>
+   <slot>Hi(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>163</x>
+     <y>103</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>178</x>
+     <y>714</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>Click()</slot>
+  <slot>Act(QString)</slot>
+  <slot>Act(int)</slot>
+  <slot>Cur(QString)</slot>
+  <slot>Cur(int)</slot>
+  <slot>Hi(int)</slot>
+ </slots>
+</ui>

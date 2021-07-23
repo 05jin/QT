@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QTableWidgetTestClass</class>
+ <widget class="QWidget" name="QTableWidgetTestClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1079</width>
+    <height>705</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>QTableWidgetTest</string>
+  </property>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>80</y>
+     <width>511</width>
+     <height>551</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QHeaderView::section{
+	
+	background-color: qlineargradient(spread:reflect, x1:1, y1:0.477318, x2:1, y2:1, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));
+  
+	color: rgb(255, 255, 255);
+	border:1px solid rgba(122,122, 122, 255);
+}
+
+QHeaderView::section:checked{ /*选中*/
+	background-color: rgba(55, 55, 55,255 );
+}
+QHeaderView::section:hover{  /*鼠标悬停*/
+	background-color: rgba(85, 10, 10,255 );
+}
+
+QTableWidget{
+	
+	background-color: rgb(27, 122, 239);
+    
+	alternate-background-color: rgb(26, 81, 232);
+    color:white;
+   
+}
+</string>
+   </property>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOn</enum>
+   </property>
+   <property name="horizontalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="editTriggers">
+    <set>QAbstractItemView::DoubleClicked</set>
+   </property>
+   <property name="alternatingRowColors">
+    <bool>true</bool>
+   </property>
+   <property name="selectionMode">
+    <enum>QAbstractItemView::ExtendedSelection</enum>
+   </property>
+   <property name="selectionBehavior">
+    <enum>QAbstractItemView::SelectRows</enum>
+   </property>
+   <property name="showGrid">
+    <bool>true</bool>
+   </property>
+   <property name="gridStyle">
+    <enum>Qt::SolidLine</enum>
+   </property>
+   <property name="sortingEnabled">
+    <bool>true</bool>
+   </property>
+   <property name="cornerButtonEnabled">
+    <bool>true</bool>
+   </property>
+   <attribute name="horizontalHeaderVisible">
+    <bool>true</bool>
+   </attribute>
+   <attribute name="horizontalHeaderDefaultSectionSize">
+    <number>100</number>
+   </attribute>
+   <attribute name="horizontalHeaderHighlightSections">
+    <bool>true</bool>
+   </attribute>
+   <attribute name="horizontalHeaderMinimumSectionSize">
+    <number>50</number>
+   </attribute>
+   <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+    <bool>true</bool>
+   </attribute>
+   <attribute name="horizontalHeaderStretchLastSection">
+    <bool>false</bool>
+   </attribute>
+   <attribute name="verticalHeaderVisible">
+    <bool>true</bool>
+   </attribute>
+   <row>
+    <property name="text">
+     <string>新建行1</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>新建行2</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>新建行3</string>
+    </property>
+   </row>
+   <column>
+    <property name="text">
+     <string>新建列</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>新建列2</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>新建列3</string>
+    </property>
+   </column>
+   <item row="0" column="0">
+    <property name="text">
+     <string>1Test</string>
+    </property>
+   </item>
+   <item row="0" column="1">
+    <property name="text">
+     <string>1XC</string>
+    </property>
+   </item>
+   <item row="0" column="2">
+    <property name="text">
+     <string>1SS</string>
+    </property>
+   </item>
+   <item row="1" column="0">
+    <property name="text">
+     <string>2SSS</string>
+    </property>
+   </item>
+   <item row="1" column="1">
+    <property name="text">
+     <string>2SSS</string>
+    </property>
+   </item>
+   <item row="1" column="2">
+    <property name="text">
+     <string>2123</string>
+    </property>
+   </item>
+   <item row="2" column="0">
+    <property name="text">
+     <string>3sss</string>
+    </property>
+   </item>
+   <item row="2" column="1">
+    <property name="text">
+     <string>3sas</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QPushButton" name="delButton">
+   <property name="geometry">
+    <rect>
+     <x>780</x>
+     <y>80</y>
+     <width>101</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>删除</string>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="qtablewidgettest.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>delButton</sender>
+   <signal>clicked()</signal>
+   <receiver>QTableWidgetTestClass</receiver>
+   <slot>Del()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>825</x>
+     <y>120</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1241</x>
+     <y>208</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tableWidget</sender>
+   <signal>itemEntered(QTableWidgetItem*)</signal>
+   <receiver>QTableWidgetTestClass</receiver>
+   <slot>ItemEntered(QTableWidgetItem*)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>545</x>
+     <y>350</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1375</x>
+     <y>376</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tableWidget</sender>
+   <signal>cellEntered(int,int)</signal>
+   <receiver>QTableWidgetTestClass</receiver>
+   <slot>CellEntered(int,int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>647</x>
+     <y>497</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1330</x>
+     <y>524</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tableWidget</sender>
+   <signal>cellClicked(int,int)</signal>
+   <receiver>QTableWidgetTestClass</receiver>
+   <slot>Click(int,int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>692</x>
+     <y>287</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1173</x>
+     <y>321</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tableWidget</sender>
+   <signal>cellDoubleClicked(int,int)</signal>
+   <receiver>QTableWidgetTestClass</receiver>
+   <slot>Double(int,int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>683</x>
+     <y>437</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1343</x>
+     <y>490</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tableWidget</sender>
+   <signal>cellChanged(int,int)</signal>
+   <receiver>QTableWidgetTestClass</receiver>
+   <slot>Change(int,int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>645</x>
+     <y>419</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1251</x>
+     <y>382</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>Del()</slot>
+  <slot>ItemEntered(QTableWidgetItem*)</slot>
+  <slot>CellEntered(int,int)</slot>
+  <slot>Click(int,int)</slot>
+  <slot>Double(int,int)</slot>
+  <slot>Change(int,int)</slot>
+ </slots>
+</ui>

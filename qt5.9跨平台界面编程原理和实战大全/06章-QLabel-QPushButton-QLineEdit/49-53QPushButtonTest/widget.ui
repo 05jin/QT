@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>797</width>
+    <height>581</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Widget</string>
+  </property>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>130</y>
+     <width>141</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>最大化</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="button1">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>130</y>
+     <width>151</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&amp;D可选择按钮</string>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="shortButton">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>260</y>
+     <width>141</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&amp;PushButton</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="styleButton">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>260</y>
+     <width>221</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(125, 125, 125);
+color: rgb(255, 255, 255);
+font: 75 14pt &quot;微软雅黑&quot;;</string>
+   </property>
+   <property name="text">
+    <string>样式按钮</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="picButton">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>70</y>
+     <width>321</width>
+     <height>151</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/qpush/test.gif);
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="styleButton_2">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>400</y>
+     <width>221</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+color: rgb(255, 255, 255);
+font: 75 14pt &quot;微软雅黑&quot;;
+border-radius:10px;
+}
+
+QPushButton::!hover{
+background-color: qlineargradient(spread:reflect, x1:1, y1:0.511, x2:1, y2:0, stop:0.164179 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));
+}
+QPushButton::hover{
+	background-color: qlineargradient(spread:reflect, x1:1, y1:0.528409, x2:1, y2:0, stop:0.432836 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));
+}
+
+
+</string>
+   </property>
+   <property name="text">
+    <string>样式按钮</string>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="qpush.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Widget</receiver>
+   <slot>showMaximized()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>156</x>
+     <y>171</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>115</x>
+     <y>575</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>button1</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>Widget</receiver>
+   <slot>Click(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>361</x>
+     <y>177</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>370</x>
+     <y>659</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>button1</sender>
+   <signal>pressed()</signal>
+   <receiver>Widget</receiver>
+   <slot>Pre()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>336</x>
+     <y>165</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>302</x>
+     <y>635</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>button1</sender>
+   <signal>released()</signal>
+   <receiver>Widget</receiver>
+   <slot>Rel()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>395</x>
+     <y>169</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>468</x>
+     <y>617</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>shortButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Widget</receiver>
+   <slot>Pre()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>190</x>
+     <y>304</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>211</x>
+     <y>611</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>picButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Widget</receiver>
+   <slot>Pre()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>575</x>
+     <y>186</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>714</x>
+     <y>857</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>styleButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>Widget</receiver>
+   <slot>Pre()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>447</x>
+     <y>456</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>444</x>
+     <y>693</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>Click(bool)</slot>
+  <slot>Pre()</slot>
+  <slot>Rel()</slot>
+ </slots>
+</ui>
